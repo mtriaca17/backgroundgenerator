@@ -1,0 +1,49 @@
+body{
+    font: 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    top: 15%;
+    background: linear-gradient(to right, red, yellow);
+}
+
+h1{
+    font: 600 3.5em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    width: 100%;
+}
+
+h3{
+    font: 900 1em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
+.randomColors{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #666666;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-shadow: 0px 1px 1px #ffffff;
+    border:1px solid #dcdcdc;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%)
+
+}
+
+.randomColors:hover{
+    background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+
+}
