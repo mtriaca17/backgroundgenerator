@@ -31,9 +31,11 @@ function createRGB(){
 }
 
 function setGradient(){
+
     body.style.background = "linear-gradient(to right, " + color1.value + "," + color2.value +")"; 
 
     cssText.textContent = body.style.background + ";";
+    hexText.textContent = "Hex Code 1: "+ color1.value +  " Hex Code 2: " + color2.value;
 }
 
 function setRandomGradient(){
