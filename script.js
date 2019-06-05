@@ -38,8 +38,8 @@ function setRandomGradient(){
     let rgb2 = createRGB()
     
     body.style.background = "linear-gradient(to right, " + rgb1 + "," + rgb2 +")"
-    color1.value = stringRGB(rgb1) 
-    color2.value = stringRGB(rgb2) 
+    color1.value = stringRGBToHex(rgb1) 
+    color2.value = stringRGBToHex(rgb2) 
     cssText.textContent = body.style.background + ";";
     hexText.textContent = "Hex Code 1: "+ color1.value +  " Hex Code 2: " + color2.value;
 }
@@ -57,7 +57,7 @@ function toHex(n){
 }
 
 
-function stringRGB(rgb){
+function stringRGBToHex(rgb){
     let rgbString = rgb.slice(4, -1)
     let rgbSplitString = rgbString.split(',')
     return RGBToHex(rgbSplitString[0], rgbSplitString[1], rgbSplitString[2])
