@@ -1,14 +1,9 @@
-var cssText = document.querySelector(".gradientStringRGB");
-var hexText = document.querySelector(".gradientStringHex")
-var color1 = document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
-var body = document.querySelector("body");
-var randomButton = document.querySelector(".randomColors")
-// console.log(cssText, color1, color2);
-
-// console.log(body);
-
-// body.style.background = "red";
+const cssText = document.querySelector(".gradientStringRGB");
+const hexText = document.querySelector(".gradientStringHex")
+const color1 = document.querySelector(".color1");
+const color2 = document.querySelector(".color2");
+const body = document.querySelector("body");
+const randomButton = document.querySelector(".randomColors")
 
 color1.addEventListener("input", setGradient);
 
@@ -23,9 +18,9 @@ function getRandomNum(min, max){
 }
 
 function createRGB(){
-    var num1 = getRandomNum();
-    var num2 = getRandomNum();
-    var num3 = getRandomNum();
+    let num1 = getRandomNum();
+    let num2 = getRandomNum();
+    let num3 = getRandomNum();
 
     return rgb = ("rgb(" + num1 +","+ num2 + "," + num3 +")")
 }
@@ -39,8 +34,8 @@ function setGradient(){
 }
 
 function setRandomGradient(){
-    rgb1 = createRGB()
-    rgb2 = createRGB()
+    let rgb1 = createRGB()
+    let rgb2 = createRGB()
     
     body.style.background = "linear-gradient(to right, " + rgb1 + "," + rgb2 +")"
     color1.value = stringRGB(rgb1) 
@@ -51,8 +46,6 @@ function setRandomGradient(){
 
 function RGBToHex(r,g,b){
     return "#" + toHex(r)+ toHex(g) + toHex(b)
-    // console.log("#"+toHex(r)+ toHex(g)+ toHex(b))
-
 }
 
 function toHex(n){
@@ -65,7 +58,7 @@ function toHex(n){
 
 
 function stringRGB(rgb){
-    rgbString = rgb.slice(4, -1)
-    rgbSplitString = rgbString.split(',')
+    let rgbString = rgb.slice(4, -1)
+    let rgbSplitString = rgbString.split(',')
     return RGBToHex(rgbSplitString[0], rgbSplitString[1], rgbSplitString[2])
 }
